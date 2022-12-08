@@ -2,3 +2,7 @@ body{
     margin: 0;
     background-color: rgb(161, 153, 153);
 }
+
+
+
+@media screen and (min-width: 600px){}

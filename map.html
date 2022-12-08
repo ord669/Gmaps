@@ -67,9 +67,25 @@
   <div class="map" style="height: 50vh;"></div>
 
 
+  <table class="table table-borderless  table-hover table-dark table-books">
+    <thead>
+        <th class="col text-center" data-trans="book-id">id</th>
+        <th class="col text-center" data-trans="book-name">name</th>
+        <th class="col text-center" data-trans="book-price">price</th>
+        <th class="col text-center" data-trans="book-img">imgUrl</th>
+        <th class="col  text-center" colspan="3" data-trans="book-actions">actions</th>
+
+        </th>
+    </thead>
+    <tbody class="saved">
+    </tbody>
+    <div class="table-books"></div>
+</table>
+
+
 
   <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxrSlq4lNHS-3b7ION7JIVlbcKBrdaPVY&libraries=places&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxrSlq4lNHS-3b7ION7JIVlbcKBrdaPVY&libraries=places&callback=initMap&v=weekly">
 </script>
   <!-- 
       <script async defer
@@ -82,8 +98,8 @@
 
 
   <script src="js/services/utilService.js"></script>
-  <script src="js/services/placeService.js"></script>
   <script src="js/services/storageService.js"></script>
+  <script src="js/services/placeService.js"></script>
   <script src="js/services/userService.js"></script>
 
   <script src="js/controllers/userController.js"></script>

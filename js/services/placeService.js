@@ -1,6 +1,9 @@
 'use strict'
 
 
+const STORAGE_KEY_PLACES = 'saved-places'
+var gPlaces = loadFromStorage(STORAGE_KEY_PLACES)  || []
+
 function getPosition() {
     const user = getUserPref()
         const userLocation = user.location.split(',')
@@ -41,4 +44,35 @@ function handleLocationError(error) {
             locationError.innerHTML = "The browser timed out before retrieving the location."
             break
     }
+}
+
+
+
+
+function addSavePlace(lat,lng,name){
+    const newPlace = createPlace(lat,lng,name)
+    console.log('gPlaces:',gPlaces )
+    gPlaces.push(newPlace)
+    saveToStorage(STORAGE_KEY_PLACES, gPlaces)
+    renderSavedPlaces()
+    
+
+}
+
+
+
+
+function createPlace(lat,lng,name){
+    return {
+        id:makeId(length = 6),
+        lat,
+        lng,
+        name
+    }
+}
+
+
+function getPlaces(){
+    
+    return gPlaces
 }

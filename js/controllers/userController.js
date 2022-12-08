@@ -14,7 +14,6 @@ function onSubmitUserPref(ev) {
     const formValues = {}
     allInputsValue.forEach(({name,value})=> {
         // console.log('input:', input.value)
-        console.log('name:', name)
         formValues[name] = value
     
     })
@@ -26,7 +25,6 @@ function onSubmitUserPref(ev) {
 
 }
 
-console.log('showUserPref():', showUserPref())
 function showUserPref(){
     const userPref = getUserPref()
     document.body.style.backgroundColor = userPref.bgColor
